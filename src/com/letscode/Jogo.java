@@ -107,13 +107,14 @@ public class Jogo {
                         colunaJogo = scan.nextInt();
                     } while (colunaJogo < 0 || colunaJogo > 9);
 
-                    if (tabuleiroJogador[linhaJogo][colunaJogo] == "O"){
-                        tabuleiroJogador[linhaJogo][colunaJogo] = "X";
+
+                    if (tabuleiroMaquina[linhaJogo][colunaJogo]  == "O"){
+                        tabuleiroMaquina[linhaJogo][colunaJogo]  = "X";
                         jogadorAtual = 2;
                         break;
                     }
-                    else if (tabuleiroJogador[linhaJogo][colunaJogo] == "N"){
-                        tabuleiroJogador[linhaJogo][colunaJogo] = "*";
+                    else if (tabuleiroMaquina[linhaJogo][colunaJogo]  == "N"){
+                        tabuleiroMaquina[linhaJogo][colunaJogo]  = "*";
                         acertosJogador += 1;
                         jogadorAtual = 2;
                         break;
@@ -128,13 +129,14 @@ public class Jogo {
                 do {
                     indiceUm = random.nextInt(9);
                     indiceDois = random.nextInt(9);
-                    if (tabuleiroMaquina[indiceUm][indiceDois] == "O"){
-                        tabuleiroMaquina[indiceUm][indiceDois] = "X";
+
+                    if (tabuleiroJogador[indiceUm][indiceDois] == "O"){
+                        tabuleiroJogador[indiceUm][indiceDois] = "X";
                         jogadorAtual = 1;
                         break;
                     }
-                    else if (tabuleiroMaquina[indiceUm][indiceDois] == "N"){
-                        tabuleiroMaquina[indiceUm][indiceDois] = "*";
+                    else if (tabuleiroJogador[indiceUm][indiceDois] == "N"){
+                        tabuleiroJogador[indiceUm][indiceDois] = "*";
                         acertosMaquina += 1;
                         jogadorAtual = 1;
                         break;
